@@ -1,0 +1,19 @@
+# Mit # beginnen Kommentare
+snitch_authevesso_login:
+    # Nur mit leerzeichen einruecken, nie mit tabs
+    # Das pattern enthaelt die gewuenschte URL vom Forum Root aus gesehen
+    pattern: /authevesso/login
+    # In der naechsten Variable wird definiert was fuer ein Controller aufgerufen werden soll
+    # In der Route kön auch parameter enthalten sein. In dem Fall den parameternamen in eckigen klammern an der gewüen Stelle angeben
+    # z.B. /gewuenschte/route/zur/datei/{parameter_1}
+    defaults: { _controller: snitch.authevesso.controller:handle }
+
+
+snitch_authevesso_adm_login:
+    # Nur mit leerzeichen einruecken, nie mit tabs
+    # Das pattern enthaelt die gewuenschte URL vom Forum Root aus gesehen
+    pattern: /adm/authevesso/login
+    # In der naechsten Variable wird definiert was fuer ein Controller aufgerufen werden soll
+    # In der Route kön auch parameter enthalten sein. In dem Fall den parameternamen in eckigen klammern an der gewüen Stelle angeben
+    # z.B. /gewuenschte/route/zur/datei/{parameter_1}
+    defaults: { _controller: snitch.authevesso.controller:handleadm }

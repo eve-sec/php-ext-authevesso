@@ -1,0 +1,21 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_AUTHEVESSO_SCOPES}</h1>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+    <fieldset>
+            <!-- BEGIN scopes -->
+ 		<dl>
+			<dt><label for="scopes[{scopes.ITEM}]">{scopes.ITEM}</label></dt>
+			<dd><input type="radio" class="radio" name="scopes[{scopes.ITEM}]" value="1" <!-- IF scopes.ITEM_NUM -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+			<input type="radio" class="radio" name="scopes[{scopes.ITEM}]" value="0" <!-- IF not scopes.ITEM_NUM -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>
+            <!-- END scopes -->
+        {S_FORM_TOKEN}
+    </fieldset>
+    <p class="submit-buttons">
+        <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />
+    </p>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

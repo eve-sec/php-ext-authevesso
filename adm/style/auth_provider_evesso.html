@@ -1,0 +1,21 @@
+<fieldset id="snitch_authevesso_settings">
+	<legend>{L_EVESSO}</legend>
+        <p>{L_EVESSO_OBTAINKEY}{AUTH_EVESSO_SCOPES}{L_EVESSO_CALLBACK_URL}{AUTH_EVESSO_CALLBACK}</p>
+	<dl>
+		<dt><label for="snitch_authevesso_clientid">{L_EVESSO_CLIENTID}{L_COLON}</label><br /><span>{L_EVESSO_CLIENTID_EXPLAIN}</span></dt>
+		<dd><input type="text" id="snitch_authevesso_clientid" size="40" name="config[snitch_authevesso_clientid]" value="{AUTH_EVESSO_CLIENTID}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="snitch_authevesso_code">{L_EVESSO_CODE}{L_COLON}</label><br /><span>{L_EVESSO_CODE_EXPLAIN}</span></dt>
+		<dd><input type="text" id="snitch_authevesso_code" size="40" name="config[snitch_authevesso_code]" value="{AUTH_EVESSO_CODE}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="snitch_authevesso_esi_ua">{L_EVESSO_ESI_UA}{L_COLON}</label><br /><span>{L_EVESSO_ESI_UA_EXPLAIN}</span></dt>
+		<dd><input type="text" id="snitch_authevesso_esi_ua" size="40" name="config[snitch_authevesso_esi_ua]" value="{AUTH_EVESSO_ESI_UA}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="snitch_authevesso_admin_user">{L_EVESSO_ADMIN_USER}{L_COLON}</label><br /><span>{L_EVESSO_ADMIN_USER_EXPLAIN}</span></dt>
+		<dd><input type="text" id="snitch_authevesso_admin_user" size="40" name="config[snitch_authevesso_admin_user]" value="{AUTH_EVESSO_ADMIN_USER}" /></dd>
+	</dl>
+        <a class ="button2" href="{AUTH_EVESSO_TEST_URL}">{L_EVESSO_TEST_SSO}</a>&nbsp;<span>{AUTH_EVESSO_MESSAGE}</span>
+</fieldset>

@@ -1,0 +1,14 @@
+services:
+    auth.provider.evesso:
+        class: snitch\authevesso\auth\provider\evesso
+        arguments:
+            - @dbal.conn
+            - @config
+            - @request
+            - @user
+            - %core.root_path%
+            - %core.php_ext%
+            - @controller.helper
+            - @auth
+        tags:
+            - { name: auth.provider }

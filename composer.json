@@ -1,0 +1,24 @@
+{
+	"name": "snitch/authevesso",
+	"type": "phpbb-extension",
+	"description": "Allows authentication an registration in phpBB using EVE SSO",
+	"homepage": "https://bitbucket.org/snitchashor/phpbb-ext-auth-evesso",
+	"version": "1.2.5b",
+	"license": "BSD-2-Clause",
+	"authors": [
+		{
+			"name": "Snitch Ashor",
+			"homepage": "https://bitbucket.org/snitchashor/php-ext-authevesso",
+			"role": "Lead Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.6"
+	},
+	"extra": {
+		"display-name": "Auth EVESSO",
+		"soft-require": {
+			"phpbb/phpbb": "3.2.*"
+		}
+	}
+}

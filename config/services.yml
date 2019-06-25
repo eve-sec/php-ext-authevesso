@@ -1,0 +1,15 @@
+imports:
+    - { resource: auth.yml }
+    - { resource: cron.yml }
+    - { resource: listener.yml }
+    - { resource: imagepath.yml }
+services:
+    snitch.authevesso.controller:
+        class: snitch\authevesso\login
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@template'
+            - '@user'
+            - '@auth'
+            - '@request'

@@ -1,0 +1,15 @@
+services:
+    snitch.authevesso.profile_listener:
+        class: snitch\authevesso\event\profile_listener
+        tags:
+            - { name: event.listener }
+    snitch.authevesso.rank_listener:
+        class: snitch\authevesso\event\rank_listener
+        arguments:
+            - @template
+            - @config
+            - @dbal.conn
+            - %core.root_path%
+            - %core.php_ext%
+        tags:
+            - { name: event.listener }

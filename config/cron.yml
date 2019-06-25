@@ -1,0 +1,11 @@
+services:
+    snitch.authevesso.cron.task.groups_check:
+        class: snitch\authevesso\cron\groups_check
+        arguments:
+            - '@config'
+            - '@cache.driver'
+            - '@auth'
+        calls:
+            - [set_name, [cron.task.groups_check]]
+        tags:
+            - { name: cron.task }

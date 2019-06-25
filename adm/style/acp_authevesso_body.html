@@ -1,0 +1,133 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_SETTINGS}</h1>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+    <h3>{L_ACP_AUTHEVESSO_GENERALSETTINGS}</h3>
+    <fieldset>
+        <dl>
+            <dt><label for="snitch_authevesso_avatarsize">{L_ACP_AUTHEVESSO_AVATARSIZE}{L_COLON}</label></dt>
+            <dd><select name="snitch_authevesso_avatarsize">
+              <option></option>
+              <option value="32" <!-- IF SNITCH_AUTHEVESSO_AVATARSIZE == 32 -->selected<!-- ENDIF -->>32px</option>
+              <option value="64" <!-- IF SNITCH_AUTHEVESSO_AVATARSIZE == 64 -->selected<!-- ENDIF -->>64px</option>
+              <option value="128" <!-- IF SNITCH_AUTHEVESSO_AVATARSIZE == 128 -->selected<!-- ENDIF -->>128px</option>
+              <option value="256" <!-- IF SNITCH_AUTHEVESSO_AVATARSIZE == 256 -->selected<!-- ENDIF -->>256px</option>
+            </select></dt>
+        </dl>
+	<dl>
+		<dt><label for="snitch_authevesso_enablets">{L_ACP_AUTHEVESSO_ENABLETS}</label></dt>
+		<dd><input type="radio" class="radio" name="snitch_authevesso_enablets" value="1" <!-- IF SNITCH_AUTHEVESSO_ENABLETS -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+		<input type="radio" class="radio" name="snitch_authevesso_enablets" value="0" <!-- IF not SNITCH_AUTHEVESSO_ENABLETS -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+	</dl>
+        <dl>
+                <dt><label for="snitch_authevesso_existing">{L_ACP_AUTHEVESSO_EXISTING}</label><br /><span>{L_ACP_AUTHEVESSO_EXISTING_EXPLAIN}</span></dt>
+                <dd><input type="radio" class="radio" name="snitch_authevesso_existing" value="1" <!-- IF SNITCH_AUTHEVESSO_EXISTING -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+                <input type="radio" class="radio" name="snitch_authevesso_existing" value="0" <!-- IF not SNITCH_AUTHEVESSO_EXISTING -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+        </dl>
+        <dl>
+                <dt><label for="snitch_authevesso_req_corp">{L_ACP_AUTHEVESSO_REQ_CORP}</label><br /><span>{L_ACP_AUTHEVESSO_REQ_CORP_EXPLAIN}</span></dt>
+                <dd><input type="radio" class="radio" name="snitch_authevesso_req_corp" value="1" <!-- IF SNITCH_AUTHEVESSO_REQ_CORP -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+                <input type="radio" class="radio" name="snitch_authevesso_req_corp" value="0" <!-- IF not SNITCH_AUTHEVESSO_REQ_CORP -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+        </dl>
+    </fieldset>
+    <h3>{L_ACP_AUTHEVESSO_CRONSETTINGS}</h3>
+    <fieldset>
+        <dl>
+                <dt><label for="snitch_authevesso_croninterval">{L_ACP_AUTHEVESSO_CRONINTERVAL}{L_COLON}</label></dt>
+                <dd><input type="text" id="snitch_authevesso_croninterval" size="10" name="snitch_authevesso_croninterval" value="{SNITCH_AUTHEVESSO_CRONINTERVAL}" /></dd>
+        </dl>
+	<dl>
+                <dt><label for="snitch_authevesso_maxcron">{L_ACP_AUTHEVESSO_MAXCRON}{L_COLON}</label></dt>
+          	<dd><input type="text" id="snitch_authevesso_maxcron" size="10" name="snitch_authevesso_maxcron" value="{SNITCH_AUTHEVESSO_MAXCRON}" /></dd>
+     	</dl>
+        <dl>
+                <dt><label for="snitch_authevesso_req_validsso">{L_ACP_AUTHEVESSO_REQ_VALIDSSO}</label><br /><span>{L_ACP_AUTHEVESSO_REQ_VALIDSSO_EXPLAIN}</span></dt>
+                <dd><input type="radio" class="radio" name="snitch_authevesso_req_validsso" value="1" <!-- IF SNITCH_AUTHEVESSO_REQ_VALIDSSO -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+                <input type="radio" class="radio" name="snitch_authevesso_req_validsso" value="0" <!-- IF not SNITCH_AUTHEVESSO_REQ_VALIDSSO -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+        </dl>
+    </fieldset>
+    <h3>{L_ACP_AUTHEVESSO_TSSERVERSETTINGS}</h3>
+    <div class="errorbox" <!-- IF not SNITCH_AUTHEVESSO_TSERROR -->style="display: None;"<!-- ENDIF -->>
+        <p>{SNITCH_AUTHEVESSO_TSERRORMSG}</p>
+    </div>
+    <fieldset>
+        <dl>
+                <dt><label for="snitch_authevesso_tsserver">{L_ACP_AUTHEVESSO_TSSERVER}{L_COLON}</label></dt>
+                <dd><input type="text" id="snitch_authevesso_tsserver" size="40" name="snitch_authevesso_tsserver" value="{SNITCH_AUTHEVESSO_TSSERVER}" /></dd>
+        </dl>
+        <dl>
+                <dt><label for="snitch_authevesso_tsport">{L_ACP_AUTHEVESSO_TSPORT}{L_COLON}</label></dt>
+                <dd><input type="text" id="snitch_authevesso_tsport" size="40" name="snitch_authevesso_tsport" value="{SNITCH_AUTHEVESSO_TSPORT}" /></dd>
+        </dl>
+        <dl>
+                <dt><label for="snitch_authevesso_tsadmin">{L_ACP_AUTHEVESSO_TSADMIN}{L_COLON}</label></dt>
+                <dd><input type="text" id="snitch_authevesso_tsadmin" size="40" name="snitch_authevesso_tsadmin" value="{SNITCH_AUTHEVESSO_TSADMIN}" /></dd>
+        </dl>
+        <dl>
+                <dt><label for="snitch_authevesso_tspass">{L_ACP_AUTHEVESSO_TSPASS}{L_COLON}</label></dt>
+                <dd><input type="password" id="snitch_authevesso_tspass" size="40" name="snitch_authevesso_tspass" value="{SNITCH_AUTHEVESSO_TSPASS}" /></dd>
+        </dl>
+        <dl>
+                <dt><label for="snitch_authevesso_tsquery">{L_ACP_AUTHEVESSO_TSQUERY}{L_COLON}</label></dt>
+                <dd><input type="text" id="snitch_authevesso_tsquery" size="40" name="snitch_authevesso_tsquery" value="{SNITCH_AUTHEVESSO_TSQUERY}" /></dd>
+        </dl>
+    </fieldset>
+    <h3>{L_ACP_AUTHEVESSO_TS3MAPPINGS}</h3>
+    <fieldset>
+        <table class="table1 zebra-table responsive">
+          <thead>
+            <tr>
+              <th>{L_ACP_AUTHEVESSO_NAME}</th>
+              <th>{L_ACP_AUTHEVESSO_TYPE}</th>
+              <th>{L_ACP_AUTHEVESSO_FGROUP}</th>
+              <th>{L_ACP_AUTHEVESSO_TSGROUP}</th>
+            </tr>
+          </thead>
+            <!-- BEGIN groups -->
+            <tr>
+              <td><input type="hidden" name="groups[{groups.NUM}][id]" value="{groups.ID}" /><input type="text" name="groups[{groups.NUM}][name]" value="{groups.NAME}" oninput="namechange(this);" /></td>
+              <td>
+                <select name="groups[{groups.NUM}][type]">
+                  <option></option>
+                  <option value="corporation" <!-- IF groups.TYPE == "corporation" -->selected<!-- ENDIF -->>{L_ACP_AUTHEVESSO_CORP}</option>
+                  <option value="alliance" <!-- IF groups.TYPE == "alliance" -->selected<!-- ENDIF -->>{L_ACP_AUTHEVESSO_ALLI}</option>
+                </select>
+              </td>
+              <td>
+                <select name="groups[{groups.NUM}][forum_group]">
+                  <option></option>
+                  <!-- BEGIN groups.forumgroups -->
+                  <option value="{forumgroups.ITEM_NUM}" <!-- IF groups.FORUM_GROUP == forumgroups.ITEM_NUM -->selected<!-- ENDIF -->>{forumgroups.ITEM}</option>
+                  <!-- END groups.forumgroups -->
+                </select>
+              </td>
+              <td>
+                <select name="groups[{groups.NUM}][ts_group]">
+                  <option></option>
+                  <!-- BEGIN groups.ts3groups -->
+                  <option value="{ts3groups.ITEM_NUM}" <!-- IF groups.TS_GROUP == ts3groups.ITEM_NUM -->selected<!-- ENDIF -->>{ts3groups.ITEM}</option>
+                  <!-- END groups.ts3groups -->
+                </select>
+              </td>
+            </tr>
+            <!-- END groups -->
+        </table>
+        <p class="submit-buttons">
+            <input class="button1" type="submit" id="addrow" name="addrow" value="{L_ACP_AUTHEVESSO_ADDROW}" />&nbsp;
+        </p>
+        {S_FORM_TOKEN}
+    </fieldset>
+    <p class="submit-buttons">
+        <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />
+    </p>
+</form>
+<script>
+function namechange(field) {
+    f = $(field);
+    name = f.attr('name');
+    idfield = $("[name='"+name.replace('name','id')+"']");
+    idfield.attr('value', '');
+}
+</script>
+<!-- INCLUDE overall_footer.html -->
